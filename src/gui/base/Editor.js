@@ -233,6 +233,14 @@ export class Editor {
 		      )
 	}
 
+	insertImage(srcAttr: string, attrs?: {[string]: string}) {
+		this._squire.insertImage(srcAttr, attrs)
+	}
+
+	getDOM(): HTMLElement {
+		return this._squire.getRoot()
+	}
+
 	focus() {
 		this._squire.focus()
 		this.getStylesAtPath()
